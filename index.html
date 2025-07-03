@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Pérez - Tarjeta de Presentación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .hover-scale {
+            transition: transform 0.2s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg flex items-center justify-center p-4">
+    <div class="max-w-md w-full bg-white rounded-2xl card-shadow overflow-hidden">
+        <!-- Header con foto de perfil -->
+        <div class="relative h-32 bg-gradient-to-r from-blue-500 to-purple-600">
+            <div class="absolute -bottom-12 left-1/2 transform -translate-x-1/2">
+                <img src="LogoJavier.png" alt="Foto de perfil" 
+                     class="w-24 h-24 rounded-full border-4 border-white object-cover">
+            </div>
+        </div>
+
+        <!-- Información principal -->
+        <div class="pt-16 pb-8 px-6 text-center">
+            <h1 class="text-2xl font-bold text-gray-800 mb-1">Javier Ayala Puente</h1>
+            <p class="text-gray-600 mb-2">Serralheiro</p>
+            <p class="text-sm text-gray-500 mb-6"></p>
+
+            <!-- Información de contacto -->
+            <div class="space-y-4 mb-8">
+                <!-- Teléfono -->
+                <div class="flex items-center justify-center space-x-3 text-gray-700">
+                    <i class="fas fa-phone text-blue-500"></i>
+                    <a href="tel:+34123456789" class="hover:text-blue-500 transition-colors">
+                        61983434480
+                    </a>
+                </div>
+
+                <!-- Email -->
+                <div class="flex items-center justify-center space-x-3 text-gray-700">
+                    <i class="fas fa-envelope text-blue-500"></i>
+                    <a href="mailto:juan.perez@email.com" class="hover:text-blue-500 transition-colors">
+                        javierayalapuente@gmail.com
+                    </a>
+                </div>
+
+                <!-- Ubicación -->
+                <div class="flex items-center justify-center space-x-3 text-gray-700">
+                    <i class="fas fa-map-marker-alt text-blue-500"></i>
+                    <span>Aguas Lindas e Contornos</span>
+                </div>
+
+                <!-- Sitio web 
+                <div class="flex items-center justify-center space-x-3 text-gray-700">
+                    <i class="fas fa-globe text-blue-500"></i>
+                    <a href="https://juanperez.dev" target="_blank" class="hover:text-blue-500 transition-colors">
+                    </a>
+                </div>
+
+                <!-- Ubicación -->
+              
+
+                <!-- Sitio web
+                <div class="flex items-center justify-center space-x-3 text-gray-700">
+                    <i class="fas fa-globe text-blue-500"></i>
+                    <a href="https://juanperez.dev" target="_blank" class="hover:text-blue-500 transition-colors">
+
+                    </a>
+                </div>-->
+            </div>
+
+            <!-- Redes sociales 
+            <div class="flex justify-center space-x-4 mb-8">
+                <a href="https://linkedin.com/in/juanperez" target="_blank" 
+                   class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover-scale hover:bg-blue-700 transition-colors">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/juanperez" target="_blank"
+                   class="w-10 h-10 bg-gray-800 text-white rounded-full flex items-center justify-center hover-scale hover:bg-gray-900 transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/juanperez" target="_blank"
+                   class="w-10 h-10 bg-blue-400 text-white rounded-full flex items-center justify-center hover-scale hover:bg-blue-500 transition-colors">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/juanperez" target="_blank"
+                   class="w-10 h-10 bg-pink-500 text-white rounded-full flex items-center justify-center hover-scale hover:bg-pink-600 transition-colors">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>-->
+
+            <!-- Botones de acción -->
+            <div class="space-y-3">
+                <button onclick="downloadVCard()" 
+                        class="w-full bg-blue-500 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-600 transition-colors flex items-center justify-center space-x-2">
+                    <i class="fas fa-download"></i>
+                    <span>Descargar Contacto</span>
+                </button>
+                
+                <button onclick="shareContact()" 
+                        class="w-full bg-gray-100 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-200 transition-colors flex items-center justify-center space-x-2">
+                    <i class="fas fa-share-alt"></i>
+                    <span>Compartir</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Información adicional 
+            <h3 class="font-semibold text-gray-800 mb-2">Acerca de mí</h3>
+            <p class="text-sm text-gray-600">
+                Desarrollador apasionado con más de 5 años de experiencia creando 
+                aplicaciones web modernas y escalables. Especializado en tecnologías 
+                JavaScript y metodologías ágiles.
+            </p>
+        </div>-->
+        <div class="bg-gray-50 px-6 py-4">
+    </div>
+
+    <script>
+        function downloadVCard() {
+            const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Javier Ayala Puente
+ORG:Freelance
+TITLE:Serralheiro
+TEL:61983434480
+EMAIL:javierayalapuente@gmail.com
+ADR:;;Aguas Lindas;;;Brasil
+NOTE:Serralheiro con experiencia en proyectos de construcción y reparación.
+END:VCARD`;
+
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'juan-perez.vcf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function shareContact() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Javier Ayala Puente - Serralheiro',
+                    text: 'Entre em contato comigo para projetos de serralheria',
+                    url: window.location.href
+                });
+            } else {
+                // Fallback para navegadores que no soportan Web Share API
+                const url = window.location.href;
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('Link copiado para a área de transferência');
+                });
+            }
+        }
+
+        // Animación de entrada
+        document.addEventListener('DOMContentLoaded', function() {
+            const card = document.querySelector('.max-w-md');
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                card.style.transition = 'all 0.6s ease-out';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
